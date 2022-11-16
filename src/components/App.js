@@ -18,11 +18,15 @@ function App() {
         setPlayers(data);
         setLoading(false);
       });
-  }, [searchInput]);
+  }, []);
 
   function searchInputFunction(e) {
     setSearchInput(e);
   }
+
+  const filteredPlayers = players.filter((player) =>
+    player.name.toLowerCase().startsWith(searchInput.toLowerCase())
+  );
 
   return (
     <div>
@@ -31,15 +35,15 @@ function App() {
         <Route exact path="/View">
           <PlayerContainer
             loading={loading}
-            players={players}
+            players={filteredPlayers}
             getSearchInput={searchInputFunction}
           />
         </Route>
         <Route exact path="/View/AddPlayer">
-          <AddPlayer />
+          <AddPlayer players={players} setPlayers={setPlayers} />
         </Route>
         <Route exact path="/">
-          <Home />
+          <Home loading={loading} />
         </Route>
         <Route path="">404 (not found)</Route>
       </Switch>
