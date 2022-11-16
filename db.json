@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Cristiano Ronaldo",
-      "imageUrl": "https://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/A6E4/production/_127542724_gettyimages-1228407694.jpg",
+      "imageUrl": "https://c4.wallpaperflare.com/wallpaper/942/905/295/soccer-cristiano-ronaldo-portuguese-wallpaper-preview.jpg",
       "position": "Attacker",
       "age": "37",
       "nationality": "Portuguese"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "name": "Lionel Messi",
-      "imageUrl": "https://static01.nyt.com/images/2019/04/16/sports/16onsoccerweb-2/merlin_153612873_5bb119b9-8972-4087-b4fd-371cab8c5ba2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+      "imageUrl": "https://i.pinimg.com/736x/04/a3/f0/04a3f000fc25883bf6ca99638660196b.jpg",
       "position": "Attacker",
       "age": "35",
       "nationality": "Argentinian"
@@ -71,6 +71,62 @@
       "age": "30",
       "nationality": "Brazilian",
       "id": 9
+    },
+    {
+      "name": "Ronaldinho",
+      "imageUrl": "https://cdn.vox-cdn.com/thumbor/5WabOR79OqtxHblAta0eEZrcZbg=/0x0:3300x2247/1200x800/filters:focal(1442x156:1970x684)/cdn.vox-cdn.com/uploads/chorus_image/image/58435547/56034291.jpg.0.jpg",
+      "position": "Forward",
+      "age": "42",
+      "nationality": "Brazilian",
+      "id": 10
+    },
+    {
+      "name": "Paolo Maldini",
+      "imageUrl": "https://thumbs.dreamstime.com/b/paolo-maldini-match-milan-italy-april-g-meazza-san-siro-stadium-football-championship-seria-ac-fc-inter-189202432.jpg",
+      "position": "Defender",
+      "age": "54",
+      "nationality": "Italian",
+      "id": 11
+    },
+    {
+      "name": "Andrés Iniesta",
+      "imageUrl": "https://images2.minutemediacdn.com/image/fetch/w_2000,h_2000,c_fit/https%3A%2F%2Fplayingfor90.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2018%2F08%2F965380748.jpeg",
+      "position": "Midfielder",
+      "age": "38",
+      "nationality": "Spanish",
+      "id": 12
+    },
+    {
+      "name": "Carles Puyol ",
+      "imageUrl": "https://i.pinimg.com/564x/9f/8a/63/9f8a635c52217de5065e5d4fcdeca945--barcelona-catalonia-football-players.jpg",
+      "position": "Defender",
+      "age": "44",
+      "nationality": "Spanish",
+      "id": 13
+    },
+    {
+      "name": "Gianluigi Buffon",
+      "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/170517152610-gianluigi-buffon.jpg?q=w_3847,h_2622,x_0,y_0,c_fill",
+      "position": "Goalkeeper",
+      "age": "44",
+      "nationality": "Italian",
+      "id": 14
+    },
+    {
+      "name": "Alex Botha",
+      "imageUrl": "https://scontent-lhr8-1.xx.fbcdn.net/v/t1.15752-9/315206844_3251995165067512_4721970937674227747_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_ohc=3B25-i_403gAX8thh1_&_nc_ht=scontent-lhr8-1.xx&oh=03_AdSZEwu69KDMUeREt-HsvVRH7aWgtb1ZKC94r_LtrOuZEA&oe=639CBA26",
+      "position": "Defender",
+      "age": "26",
+      "nationality": "Zimbabwean",
+      "id": 15
+    },
+    {
+      "name": "David Beckham",
+      "imageUrl": "https://d3nfwcxd527z59.cloudfront.net/content/uploads/2022/03/24091121/David-Beckham-Manchester-United.jpg",
+      "position": "Midfielder",
+      "age": "47",
+      "nationality": "English",
+      "id": 16
     }
   ]
 }
