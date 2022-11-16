@@ -10,7 +10,7 @@ const linkStyles = {
   marginRight: "30px",
 };
 
-function AddPlayer() {
+function AddPlayer({ setPlayers, players }) {
   const history = useHistory();
 
   const [newPlayer, setNewPlayer] = useState({
@@ -43,9 +43,15 @@ function AddPlayer() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(xxx),
-    });
+    })
+      .then((r) => r.json())
+      .then((newPlayer) => handleNewPlayer(newPlayer));
     history.push("/View");
   }
+
+  const handleNewPlayer = (newPlayer) => {
+    setPlayers([...players, newPlayer]);
+  };
 
   return (
     <div>
@@ -99,7 +105,10 @@ function AddPlayer() {
         />
         <br></br>
         <br></br>
-        <input className="addPlayerButton" type="submit" style={linkStyles} />
+
+        <button className="addPlayerButton" type="submit" style={linkStyles}>
+          Submit
+        </button>
       </form>
     </div>
   );
