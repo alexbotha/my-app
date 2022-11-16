@@ -1,13 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
 
-function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  });
-
+function Home({ loading }) {
   return loading ? (
     <div className="loading">
       <h1>Loading...</h1>
@@ -24,7 +17,7 @@ function Home() {
         via the add player, or search for specific players in our search
         section.
       </p>
-      <img src="goat.jpg" />
+      <img src="goat.jpg" alt="A goat with a ball" />
     </div>
   );
 }
