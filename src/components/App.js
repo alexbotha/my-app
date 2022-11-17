@@ -28,6 +28,8 @@ function App() {
     player.name.toLowerCase().startsWith(searchInput.toLowerCase())
   );
 
+  
+
   return (
     <div>
       <NavBar />
@@ -36,7 +38,7 @@ function App() {
           <PlayerContainer
             loading={loading}
             players={filteredPlayers}
-            getSearchInput={searchInputFunction}
+            searchInputFunction={searchInputFunction}
           />
         </Route>
         <Route exact path="/View/AddPlayer">
