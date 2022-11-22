@@ -1,11 +1,15 @@
+html {
+  background: url("../public/baack.jpg") no-repeat center center/cover;
+}
+
 .loading,
 .form,
 .database,
 .search,
 .addplayer,
 .homepage,
-.AddPlayerButton,
 .navBar {
+  color: white;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -25,10 +29,14 @@
   margin: 15px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.952);
   border-radius: 10px;
   border: 1px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.navBar:hover {
+  color: green;
 }
 
 .scroll {
