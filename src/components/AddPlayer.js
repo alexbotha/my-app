@@ -10,7 +10,7 @@ const linkStyles = {
   marginRight: "30px",
 };
 
-function AddPlayer({ setPlayers, players }) {
+function AddPlayer({ updatingPlayerList }) {
   const history = useHistory();
 
   const [newPlayer, setNewPlayer] = useState({
@@ -30,28 +30,25 @@ function AddPlayer({ setPlayers, players }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const xxx = {
+    const newPlayerDetails = {
       name: newPlayer.name,
       imageUrl: newPlayer.imageUrl,
       position: newPlayer.position,
       age: newPlayer.age,
       nationality: newPlayer.nationality,
     };
+
     fetch("http://localhost:3001/playerData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(xxx),
+      body: JSON.stringify(newPlayerDetails),
     })
       .then((r) => r.json())
-      .then((newPlayer) => handleNewPlayer(newPlayer));
-    history.push("/View");
+      .then((newPlayerDetails) => updatingPlayerList(newPlayerDetails));
+    history.push("/Players");
   }
-
-  const handleNewPlayer = (newPlayer) => {
-    setPlayers([...players, newPlayer]);
-  };
 
   return (
     <div>

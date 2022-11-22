@@ -24,25 +24,27 @@ function App() {
     setSearchInput(e);
   }
 
+  function updatingPlayerList(newPlayerDetails) {
+    setPlayers([...players, newPlayerDetails]);
+  }
+
   const filteredPlayers = players.filter((player) =>
     player.name.toLowerCase().startsWith(searchInput.toLowerCase())
   );
-
-  
 
   return (
     <div>
       <NavBar />
       <Switch>
-        <Route exact path="/View">
+        <Route exact path="/Players">
           <PlayerContainer
             loading={loading}
-            players={filteredPlayers}
+            filteredPlayers={filteredPlayers}
             searchInputFunction={searchInputFunction}
           />
         </Route>
-        <Route exact path="/View/AddPlayer">
-          <AddPlayer players={players} setPlayers={setPlayers} />
+        <Route exact path="/AddPlayer">
+          <AddPlayer updatingPlayerList={updatingPlayerList} />
         </Route>
         <Route exact path="/">
           <Home loading={loading} />
