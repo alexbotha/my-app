@@ -13,9 +13,9 @@ function Home({ loading }) {
         An index for the greatest players to play the game.
         <br></br>
         <br></br>
-        View a wide selection of player cards in our view section, add your own
-        via the add player, or search for specific players in our search
-        section.
+        View a wide selection of player cards in our view index section, add
+        your own legend of the game to the index via the add player, or search
+        for specific players in our search bar.
       </p>
       <img src="goat.jpg" alt="A goat with a ball" />
     </div>

@@ -30,7 +30,7 @@ function NavBar() {
         Home
       </NavLink>
       <NavLink
-        to="/View"
+        to="/Players"
         exact
         style={linkStyles}
         activeStyle={{

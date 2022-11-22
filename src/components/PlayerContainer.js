@@ -4,7 +4,7 @@ import AddPlayerButton from "./AddPlayerButton";
 import Search from "./Search";
 import ScrollButton from "./ScrollButton";
 
-function PlayerContainer({ players, loading, searchInputFunction }) {
+function PlayerContainer({ filteredPlayers, loading, searchInputFunction }) {
   return loading ? (
     <div className="loading">
       <h1>Loading...</h1>
@@ -20,12 +20,14 @@ function PlayerContainer({ players, loading, searchInputFunction }) {
           Below you will find an array of the greatest players to ever grace a
           Football pitch.
         </p>
+        <p>Fancy sarching for someone specifically? Use the bar below</p>
         <br></br>
         <Search searchInputFunction={searchInputFunction} />
       </div>
-      {players.map((player) => (
-        <PlayerItem key={player.id} player={player}></PlayerItem>
+      {filteredPlayers.map((filteredPlayer) => (
+        <PlayerItem key={filteredPlayer.id} filteredPlayer={filteredPlayer} />
       ))}
+
       <ScrollButton />
     </React.Fragment>
   );

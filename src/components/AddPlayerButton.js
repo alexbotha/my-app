@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 
 function AddPlayerButton() {
   return (
-    <NavLink to={"/View/AddPlayer"}>
-      <button className="AddPlayerButton">Add new player to index</button>
-    </NavLink>
+    <div className="addbutton">
+      <NavLink to={"/AddPlayer"}>
+        <button>Add new player to index</button>
+      </NavLink>
+    </div>
   );
 }
 

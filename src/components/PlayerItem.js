@@ -1,15 +1,15 @@
 import React from "react";
 
-function PlayerItem({ player }) {
+function PlayerItem({ filteredPlayer }) {
   return (
     <div>
       <div className="carding">
-        <img src={player.imageUrl} alt="player" />
+        <img src={filteredPlayer.imageUrl} alt="player" />
 
-        <h3>{player.name}</h3>
-        <p>Age: {player.age}</p>
-        <p>Nationality: {player.nationality}</p>
-        <p>Position: {player.position}</p>
+        <h3>{filteredPlayer.name}</h3>
+        <p>Age: {filteredPlayer.age}</p>
+        <p>Nationality: {filteredPlayer.nationality}</p>
+        <p>Position: {filteredPlayer.position}</p>
       </div>
     </div>
   );
