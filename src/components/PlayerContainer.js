@@ -25,10 +25,12 @@ function PlayerContainer({ filteredPlayers, loading, searchInputFunction }) {
         <Search searchInputFunction={searchInputFunction} />
       </div>
       {filteredPlayers.map((filteredPlayer) => (
-        <PlayerItem key={filteredPlayer.id} filteredPlayer={filteredPlayer} />
+        <PlayerItem
+          key={filteredPlayer.id}
+          filteredPlayer={filteredPlayer}
+          id={filteredPlayer.id}
+        />
       ))}
-
-      <ScrollButton />
     </React.Fragment>
   );
 }

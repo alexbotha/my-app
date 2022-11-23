@@ -1,16 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-function PlayerItem({ filteredPlayer }) {
+function PlayerItem({ id, filteredPlayer }) {
   return (
-    <div>
-      <div className="carding">
-        <img src={filteredPlayer.imageUrl} alt="player" />
-
-        <h3>{filteredPlayer.name}</h3>
-        <p>Age: {filteredPlayer.age}</p>
-        <p>Nationality: {filteredPlayer.nationality}</p>
-        <p>Position: {filteredPlayer.position}</p>
-      </div>
+    <div className="carding">
+      <img src={filteredPlayer.imageUrl} alt="player" />
+      <h3>
+        <NavLink to={`/Players/${id}`}>{filteredPlayer.name}</NavLink>
+      </h3>
     </div>
   );
 }
