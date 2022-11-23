@@ -5,6 +5,7 @@ import Home from "./Home";
 import PlayerContainer from "./PlayerContainer";
 import NavBar from "./NavBar";
 import AddPlayer from "./AddPlayer";
+import Player from "./Player";
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -46,10 +47,15 @@ function App() {
         <Route exact path="/AddPlayer">
           <AddPlayer updatingPlayerList={updatingPlayerList} />
         </Route>
+        <Route exact path="/Players/:id">
+          <Player />
+        </Route>
         <Route exact path="/">
           <Home loading={loading} />
         </Route>
-        <Route path="">404 (not found)</Route>
+        <Route path="">
+          <h4 className="pageNotFound">404 PAGE NOT FOUND</h4>
+        </Route>
       </Switch>
     </div>
   );
