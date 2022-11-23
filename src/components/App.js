@@ -37,6 +37,9 @@ function App() {
     <div>
       <NavBar />
       <Switch>
+        <Route exact path="/">
+          <Home loading={loading} />
+        </Route>
         <Route exact path="/Players">
           <PlayerContainer
             loading={loading}
@@ -50,9 +53,7 @@ function App() {
         <Route exact path="/Players/:id">
           <Player />
         </Route>
-        <Route exact path="/">
-          <Home loading={loading} />
-        </Route>
+
         <Route path="">
           <h4 className="pageNotFound">404 PAGE NOT FOUND</h4>
         </Route>

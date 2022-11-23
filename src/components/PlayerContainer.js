@@ -2,7 +2,6 @@ import React from "react";
 import PlayerItem from "./PlayerItem";
 import AddPlayerButton from "./AddPlayerButton";
 import Search from "./Search";
-import ScrollButton from "./ScrollButton";
 
 function PlayerContainer({ filteredPlayers, loading, searchInputFunction }) {
   return loading ? (
