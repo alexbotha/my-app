@@ -47,3 +47,8 @@ html {
   cursor: pointer;
   padding: 5px;
 }
+
+.pageNotFound {
+  text-align: center;
+  color: white;
+}
