@@ -6,7 +6,8 @@ const linkStyles = {
   width: "50px",
   padding: "12px",
   margin: "0 6px 6px",
-  background: "#c5b358",
+  background: "#C9A227",
+
   textDecoration: "none",
   color: "white",
   borderRadius: "8px",
@@ -24,7 +25,8 @@ function NavBar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "#d4af37",
+          background: "#a17f1a",
+          borderStyle: "dotted",
         }}
       >
         Home
@@ -34,10 +36,11 @@ function NavBar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "#d4af37",
+          background: "#a17f1a",
+          borderStyle: "dotted",
         }}
       >
-        View Index
+        Index
       </NavLink>
     </div>
   );
