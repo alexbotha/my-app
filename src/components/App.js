@@ -10,7 +10,6 @@ import Player from "./Player";
 function App() {
   const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     fetch(`http://localhost:3001/playerData`)
@@ -21,17 +20,9 @@ function App() {
       });
   }, []);
 
-  function searchInputFunction(e) {
-    setSearchInput(e);
-  }
-
   function updatingPlayerList(newPlayerDetails) {
     setPlayers([...players, newPlayerDetails]);
   }
-
-  const filteredPlayers = players.filter((player) =>
-    player.name.toLowerCase().startsWith(searchInput.toLowerCase())
-  );
 
   return (
     <div>
@@ -41,11 +32,7 @@ function App() {
           <Home loading={loading} />
         </Route>
         <Route exact path="/Players">
-          <PlayerContainer
-            loading={loading}
-            filteredPlayers={filteredPlayers}
-            searchInputFunction={searchInputFunction}
-          />
+          <PlayerContainer loading={loading} players={players} />
         </Route>
         <Route exact path="/AddPlayer">
           <AddPlayer updatingPlayerList={updatingPlayerList} />
