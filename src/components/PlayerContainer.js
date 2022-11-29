@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import PlayerItem from "./PlayerItem";
 import AddPlayerButton from "./AddPlayerButton";
 import Search from "./Search";
 
-function PlayerContainer({ filteredPlayers, loading, searchInputFunction }) {
+function PlayerContainer({ loading, players }) {
+  const [searchInput, setSearchInput] = useState("");
+
+  function searchInputFunction(e) {
+    setSearchInput(e);
+  }
+
+  const filteredPlayers = players.filter((player) =>
+    player.name.toLowerCase().startsWith(searchInput.toLowerCase())
+  );
+
   return loading ? (
     <div className="loading">
       <h1>Loading...</h1>
     </div>
   ) : (
     <React.Fragment>
-      <div className="database allText">
+      <div className="database">
         <h1>GOAT index.</h1>
         <hr></hr>
         <br></br>

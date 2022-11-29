@@ -1,11 +1,7 @@
 import React from "react";
-import { useState } from "react";
 
 function Search({ searchInputFunction }) {
-  const [search, setSearch] = useState("");
-
   function onChange(e) {
-    setSearch(e);
     searchInputFunction(e);
   }
   return (
@@ -13,7 +9,6 @@ function Search({ searchInputFunction }) {
       <form>
         <input
           type="text"
-          value={search}
           onChange={(e) => onChange(e.target.value)}
           placeholder="Search player name..."
           autoFocus
