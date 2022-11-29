@@ -1,5 +1,4 @@
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const linkStyles = {
@@ -30,20 +29,13 @@ function AddPlayer({ updatingPlayerList }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const newPlayerDetails = {
-      name: newPlayer.name,
-      imageUrl: newPlayer.imageUrl,
-      position: newPlayer.position,
-      age: newPlayer.age,
-      nationality: newPlayer.nationality,
-    };
 
     fetch("http://localhost:3001/playerData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newPlayerDetails),
+      body: JSON.stringify(newPlayer),
     })
       .then((r) => r.json())
       .then((newPlayerDetails) => updatingPlayerList(newPlayerDetails));
@@ -87,7 +79,7 @@ function AddPlayer({ updatingPlayerList }) {
           style={linkStyles}
         />
         <input
-          type="text"
+          type="number"
           name="age"
           onChange={handleChange}
           placeholder="Age..."
@@ -100,8 +92,8 @@ function AddPlayer({ updatingPlayerList }) {
           placeholder="Nationality..."
           style={linkStyles}
         />
-        <br></br>
-        <br></br>
+        <br />
+        <br />
 
         <button className="addPlayerButton" type="submit" style={linkStyles}>
           Submit
