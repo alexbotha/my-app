@@ -31,13 +31,13 @@ function App() {
         <Route exact path="/">
           <Home loading={loading} />
         </Route>
-        <Route exact path="/Players">
+        <Route exact path="/players">
           <PlayerContainer loading={loading} players={players} />
         </Route>
-        <Route exact path="/Players/New">
+        <Route exact path="/players/new">
           <AddPlayer updatingPlayerList={updatingPlayerList} />
         </Route>
-        <Route exact path="/Players/:id">
+        <Route exact path="/players/:id">
           <Player />
         </Route>
 

@@ -6,7 +6,7 @@ function PlayerItem({ id, filteredPlayer }) {
     <div className="carding">
       <img src={filteredPlayer.imageUrl} alt="player" />
       <h3>
-        <NavLink to={`/Players/${id}`}>{filteredPlayer.name}</NavLink>
+        <NavLink to={`/players/${id}`}>{filteredPlayer.name}</NavLink>
       </h3>
     </div>
   );
