@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/Players">
           <PlayerContainer loading={loading} players={players} />
         </Route>
-        <Route exact path="/AddPlayer">
+        <Route exact path="/Players/New">
           <AddPlayer updatingPlayerList={updatingPlayerList} />
         </Route>
         <Route exact path="/Players/:id">

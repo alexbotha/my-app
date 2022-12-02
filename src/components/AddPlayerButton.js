@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function AddPlayerButton() {
   return (
     <div className="addbutton">
-      <NavLink to={"/AddPlayer"}>
+      <NavLink to={"/Players/New"}>
         <button>Add new player to index</button>
       </NavLink>
     </div>
