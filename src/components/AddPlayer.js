@@ -28,6 +28,8 @@ function AddPlayer({ updatingPlayerList }) {
   }
 
   function handleSubmit(event) {
+    const newPlayerVar = newPlayer;
+
     event.preventDefault();
 
     fetch("http://localhost:3001/playerData", {
@@ -35,7 +37,7 @@ function AddPlayer({ updatingPlayerList }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newPlayer),
+      body: JSON.stringify(newPlayerVar),
     })
       .then((r) => r.json())
       .then((newPlayerDetails) => updatingPlayerList(newPlayerDetails));
