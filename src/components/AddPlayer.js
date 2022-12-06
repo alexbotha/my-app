@@ -65,6 +65,7 @@ function AddPlayer({ updatingPlayerList }) {
           onChange={handleChange}
           placeholder="Name..."
           style={linkStyles}
+          value={newPlayer.name}
         />
         <input
           type="text"
@@ -72,6 +73,7 @@ function AddPlayer({ updatingPlayerList }) {
           onChange={handleChange}
           placeholder="Image URL here..."
           style={linkStyles}
+          value={newPlayer.imageUrl}
         />
         <input
           type="text"
@@ -79,13 +81,15 @@ function AddPlayer({ updatingPlayerList }) {
           onChange={handleChange}
           placeholder="Position..."
           style={linkStyles}
+          value={newPlayer.position}
         />
         <input
-          type="number"
+          type="text"
           name="age"
           onChange={handleChange}
           placeholder="Age..."
           style={linkStyles}
+          value={newPlayer.age}
         />
         <input
           type="text"
@@ -93,6 +97,7 @@ function AddPlayer({ updatingPlayerList }) {
           onChange={handleChange}
           placeholder="Nationality..."
           style={linkStyles}
+          value={newPlayer.nationality}
         />
         <br />
         <br />
