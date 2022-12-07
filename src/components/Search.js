@@ -1,6 +1,6 @@
 import React from "react";
 
-function Search({ searchInputFunction }) {
+function Search({ searchInputFunction, searchInput }) {
   function onChange(e) {
     searchInputFunction(e);
   }
@@ -12,6 +12,7 @@ function Search({ searchInputFunction }) {
           onChange={(e) => onChange(e.target.value)}
           placeholder="Search player name..."
           autoFocus
+          value={searchInput}
         />
       </form>
     </div>

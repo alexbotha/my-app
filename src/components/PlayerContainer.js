@@ -31,7 +31,10 @@ function PlayerContainer({ loading, players }) {
         </p>
         <p>Fancy sarching for someone specifically? Use the bar below</p>
         <br></br>
-        <Search searchInputFunction={searchInputFunction} />
+        <Search
+          searchInputFunction={searchInputFunction}
+          searchInput={searchInput}
+        />
       </div>
       {filteredPlayers.map((filteredPlayer) => (
         <PlayerItem
