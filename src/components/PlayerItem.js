@@ -11,8 +11,8 @@ function PlayerItem({ id, filteredPlayer, deletePlayer }) {
       <img src={filteredPlayer.imageUrl} alt="player" />
       <h3>
         <NavLink to={`/players/${id}`}>{filteredPlayer.name}</NavLink>
-
         <br></br>
+
         <button className="deleteBtn" onClick={handleDelete}>
           Delete
         </button>
