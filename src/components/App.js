@@ -24,6 +24,16 @@ function App() {
     setPlayers([...players, newPlayerDetails]);
   }
 
+  function deletePlayer(deletedPlayerDetails) {
+    const postDelete = players.filter((playerObj) => {
+      return playerObj.id !== deletedPlayerDetails.id;
+    });
+    setPlayers(postDelete);
+    fetch(`http://localhost:3001/playerData/${deletedPlayerDetails.id}`, {
+      method: "DELETE",
+    });
+  }
+
   return (
     <div>
       <NavBar />
@@ -32,7 +42,11 @@ function App() {
           <Home loading={loading} />
         </Route>
         <Route exact path="/players">
-          <PlayerContainer loading={loading} players={players} />
+          <PlayerContainer
+            loading={loading}
+            players={players}
+            deletePlayer={deletePlayer}
+          />
         </Route>
         <Route exact path="/players/new">
           <AddPlayer updatingPlayerList={updatingPlayerList} />

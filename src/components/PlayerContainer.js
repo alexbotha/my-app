@@ -3,7 +3,7 @@ import PlayerItem from "./PlayerItem";
 import AddPlayerButton from "./AddPlayerButton";
 import Search from "./Search";
 
-function PlayerContainer({ loading, players }) {
+function PlayerContainer({ loading, players, deletePlayer }) {
   const [searchInput, setSearchInput] = useState("");
 
   function searchInputFunction(e) {
@@ -41,6 +41,7 @@ function PlayerContainer({ loading, players }) {
           key={filteredPlayer.id}
           filteredPlayer={filteredPlayer}
           id={filteredPlayer.id}
+          deletePlayer={deletePlayer}
         />
       ))}
     </React.Fragment>

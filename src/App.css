@@ -39,13 +39,8 @@ html {
   color: green;
 }
 
-.scroll {
-  bottom: 40px;
-  right: 5px;
-  border-radius: 50px;
-  position: fixed;
-  cursor: pointer;
-  padding: 5px;
+.deleteBtn {
+  margin-top: 10px;
 }
 
 .pageNotFound {
