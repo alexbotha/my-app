@@ -4,13 +4,13 @@ import { useParams } from "react-router-dom";
 function Player() {
   const [player, setPlayer] = useState({});
 
-  const params = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/playerData/${params.id}`)
+    fetch(`http://localhost:3001/playerData/${id}`)
       .then((response) => response.json())
       .then((data) => setPlayer(data));
-  }, [params.id]);
+  }, [id]);
 
   return (
     <div className="carding">
